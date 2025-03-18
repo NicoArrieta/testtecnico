@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="./style.css">
+    <title>Calculadora de Beneficios</title>
+    <script>
+        
+        
+    </script>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section class="containerForm">
+            <h1>Calculadora de beneficios</h1>
+            <form>
+                <select id="menu" onchange="ejecutarFuncion()">
+                    <option value="">-- Selecciona un rubro --</option>
+                    <option value="1">Inmobiliarias</option>
+                    <option value="2">Club deportivo</option>
+                    <option value="3">Expensas B° privados</option>
+                    <option value="4">Institución educativa</option>
+                </select>
+                <div class="contentCampos">
+                    <input type="text" id="clientes" placeholder="¿Cuántos clientes tiene?" oninput="calcularTotal()">
+                    <p>Canon promedio</p>
+                    <div class="boxPrecio">
+                        <label for="precio">$</label>
+                        <input type="text" id="precio" placeholder="0,00" oninput="formatearInputCanon(event);">
+                    </div>
+                    <p id="totalNormal">Total: $0,00</p>
+                    <p id="totalAjustado" data-variacion="0">Total ajustado: $0,00</p>
+                </div>                
+            </form>
+        </section>
+    </div>
+	<script src="./script.js"></script>
+</body>
+</html>
